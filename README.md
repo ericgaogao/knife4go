@@ -1,5 +1,14 @@
 # knife4go
 
+#### 项目调整中... （今年加班太多，维护缓慢，大家谅解）
+- 1. 将openapi3.0和swagger2.0的支持单独列分支,master将保持swagger2.0支持。解决现存的。
+- 2. 解决现存openapi3.0支持bug。
+- 3. 拉新分支用https://github.com/wI2L/fizz 来适配knife4j的ui,不用再生成swagger.json。
+
+
+
+
+
 #### 介绍
 优化gin-swagger的界面,让knif4j适配go语言。感谢萧明。
 knif4j地址：https://gitee.com/xiaoym/knife4j
@@ -10,12 +19,17 @@ knif4j地址：https://gitee.com/xiaoym/knife4j
 
 
 #### 模块说明
-| 模块        | 描述    |  
-| --------   | :-----   | 
-|  gin-swagger-knife   |  替换gin-swagger的界面实现(并非在原项目代码上修改)，供gin项目引用  |  
-|  knife-vue-dist |  knife4j-vue项目打包后的dist目录内容，用于knife-vue-2-go-code中生成代码的逻辑  |    
-|  knife-vue-2-go-code   |  用于生成gin-swagger-knife中的代码，方便根据最新版本的knif4j升级界面  |      
-|  knife4go-example |  gin-swagger-knife 使用示例  |
+| 模块                         | 描述                                                                    |  
+|----------------------------|:----------------------------------------------------------------------| 
+| gin-swagger-knife          | 替换gin-swagger的界面实现(并非在原项目代码上修改)，供gin项目引用 (适用于swagger2)                |  
+| gin-openapi3-knife         | 替换gin-swagger的界面实现(并非在原项目代码上修改)，供gin项目引用 (适用于openapi3)                |  
+| fizz-knife                 | 替换fizz的界面实现(并非在原项目代码上修改)，供gin项目引用 (基于fizz展示openapi3,不需要用swagger.json) |  
+| knife-vue-dist             | knife4j-vue项目打包后的dist目录内容，用于knife-vue-2-go-code中生成代码的逻辑               |    
+| knife-vue-2-go-code        | 用于生成gin-swagger-knife中的代码，方便根据最新版本的knif4j升级界面                         |      
+| knife4go-example           | gin-swagger-knife 使用示例（废弃）                                            |
+| gin-swagger-knife-example  | gin-swagger-knife 使用示例                                                |
+| gin-openapi3-knife-example | gin-openapi3-knife 使用示例                                               |
+| fizz-knife-example         | fizz-knife 使用示例                                                       |
 
 
 #### 使用步骤
