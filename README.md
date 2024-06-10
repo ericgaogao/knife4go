@@ -70,7 +70,7 @@ knif4j地址：https://gitee.com/xiaoym/knife4j
 
 
 
-
+      
 - 4. 访问
 	http://127.0.0.1:8080/knife/doc.html
 
@@ -81,6 +81,7 @@ knif4j地址：https://gitee.com/xiaoym/knife4j
 - 1. 效果图
 ![image](https://gitee.com/youbeiwuhuan/knife4go/raw/master/img/fizz-knife.png)	
 
+	注意访问地址：http://127.0.0.1:8080/doc.html
 
 - 2. 引入gin-swagger-knife项目
 	 go get gitee.com/youbeiwuhuan/knife4go/fizz-knife
@@ -226,5 +227,6 @@ knif4j地址：https://gitee.com/xiaoym/knife4j
 		return basket, nil
 	}
 ```
-
+- 4. 访问
+	 http://127.0.0.1:8080/doc.html
 
