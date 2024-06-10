@@ -1,14 +1,5 @@
 package constant
 
-
-
-
-const(
-	ROOT_PATH="/knife"
+const (
+	ROOT_PATH = ""
 )
-
-
-
-
-
-
