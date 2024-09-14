@@ -8,9 +8,16 @@ import (
 	{{end}}
 )
 
+
+type InitArgs struct {
+	SwaggerJson string // swagger.json文件里的内容
+	ServiceJson string // service.json文件里的内容
+}
+
 //@param content string swag int 命令生成的swagger.json文件里的内容
-func InitSwaggerKnife(router *gin.Engine, swaggerJson string) {
-	v2.AddApiDocRouter(router, swaggerJson)
+func InitSwaggerKnife(router *gin.Engine, args *InitArgs) {
+	v2.AddApiDocRouter(router, args.SwaggerJson)
+	v2.AddSwaggerServicesRouter(router, args.ServiceJson)
 	v2.AddSwaggerResourcesRouter(router)
     {{range $i,$v := .Lines}}
         {{$v.PackageAlian}}.AddRouterOf{{$v.FileName3}}(router)

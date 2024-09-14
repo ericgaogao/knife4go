@@ -91,6 +91,7 @@ const (
           ['client_secret', this.cacheValue.clientSecret]
         ]);
         const clientParamsString = params.toString();
+       
         let requestConfig={
             url: url,
             method: 'post',
@@ -110,7 +111,8 @@ const (
                 window.close();
             }
             
-        })    }
+        })
+    }
     var oauth=new OAuth2(window.location.href);
     oauth.init();
     oauth.auth();
