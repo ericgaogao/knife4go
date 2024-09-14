@@ -1,16 +1,13 @@
 package oauth
 
-
 import (
-	"gitee.com/youbeiwuhuan/knife4go/gin-openapi3-knife/constant"
-	"gitee.com/youbeiwuhuan/knife4go/gin-openapi3-knife/utils"
+	"github.com/ericgaogao/knife4go/gin-openapi3-knife/constant"
+	"github.com/ericgaogao/knife4go/gin-openapi3-knife/utils"
 	"github.com/gin-gonic/gin"
-
 )
 
-
 const (
-	OAUTH2_HTML_RELATIVE_PATH = constant.ROOT_PATH + "/webjars/oauth/oauth2.html"
+	OAUTH2_HTML_RELATIVE_PATH = constant.ROOT_PATH + "/webjarstmp/oauth/oauth2.html"
 	// 文件内容的16进制表示
 	OAUTH2_HTML_HEX_CONTENT = `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
@@ -119,14 +116,7 @@ const (
 )
 
 func AddRouterOfOauth2Html(router *gin.Engine) {
-    
-    utils.GetHtml(router, OAUTH2_HTML_RELATIVE_PATH, OAUTH2_HTML_HEX_CONTENT)
-    
+
+	utils.GetHtml(router, OAUTH2_HTML_RELATIVE_PATH, OAUTH2_HTML_HEX_CONTENT)
+
 }
-
-
-
-
-
-
-

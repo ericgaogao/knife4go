@@ -15,7 +15,7 @@ knif4j地址：https://gitee.com/xiaoym/knife4j
 
 
 #### 效果图
-![image](https://gitee.com/youbeiwuhuan/knife4go/raw/master/img/knife4go.png)
+![image](https://github.com/ericgaogao/knife4go/raw/master/img/knife4go.png)
 
 
 #### 模块说明
@@ -46,17 +46,17 @@ knif4j地址：https://gitee.com/xiaoym/knife4j
 	
 	
 - 2. 引入gin-swagger-knife项目
-	go get gitee.com/youbeiwuhuan/knife4go/gin-swagger-knife
+	go get github.com/ericgaogao/knife4go/gin-swagger-knife
 	
 	
 - 3.  gin 中初始化相关访问路径
-	![image](https://gitee.com/youbeiwuhuan/knife4go/raw/master/img/example.png)
+	![image](https://github.com/ericgaogao/knife4go/raw/master/img/example.png)
 
 	``` go
 		
 		import (
 			"fmt"
-			gin_swagger_knife "gitee.com/youbeiwuhuan/knife4go/gin-swagger-knife"
+			gin_swagger_knife "github.com/ericgaogao/knife4go/gin-swagger-knife"
 			"github.com/gin-gonic/gin"
 		)
 		
@@ -79,12 +79,12 @@ knif4j地址：https://gitee.com/xiaoym/knife4j
 #### fizz-knife （不用再生成swagger.json，用硬编码替代swagger注解）
 
 - 1. 效果图
-![image](https://gitee.com/youbeiwuhuan/knife4go/raw/master/img/fizz-knife.png)	
+![image](https://github.com/ericgaogao/knife4go/raw/master/img/fizz-knife.png)	
 
 	注意访问地址：http://127.0.0.1:8080/doc.html
 
 - 2. 引入gin-swagger-knife项目
-	 go get gitee.com/youbeiwuhuan/knife4go/fizz-knife
+	 go get github.com/ericgaogao/knife4go/fizz-knife
 
 - 3. 代码样例
 
@@ -95,7 +95,7 @@ knif4j地址：https://gitee.com/xiaoym/knife4j
 
 	import (
 		"fmt"
-		fizz_knife "gitee.com/youbeiwuhuan/knife4go/fizz-knife"
+		fizz_knife "github.com/ericgaogao/knife4go/fizz-knife"
 		"github.com/gin-contrib/cors"
 		"github.com/gin-gonic/gin"
 		"github.com/juju/errors"

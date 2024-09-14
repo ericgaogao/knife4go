@@ -1,8 +1,8 @@
 package icons
 
 import (
-	"gitee.com/youbeiwuhuan/knife4go/fizz-knife/constant"
-	"gitee.com/youbeiwuhuan/knife4go/fizz-knife/utils"
+	"github.com/ericgaogao/knife4go/fizz-knife/constant"
+	"github.com/ericgaogao/knife4go/fizz-knife/utils"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,10 +17,3 @@ func AddRouterOfAndroidChrome512x512Png(router *gin.Engine) {
 	utils.GetOther(router, ANDROID_CHROME_512X512_PNG_RELATIVE_PATH, ANDROID_CHROME_512X512_PNG_HEX_CONTENT)
 
 }
-
-
-
-
-
-
-

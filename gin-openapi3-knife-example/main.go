@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	gin_openapi3_knife "gitee.com/youbeiwuhuan/knife4go/gin-openapi3-knife"
+	gin_openapi3_knife "github.com/ericgaogao/knife4go/gin-openapi3-knife"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"log"

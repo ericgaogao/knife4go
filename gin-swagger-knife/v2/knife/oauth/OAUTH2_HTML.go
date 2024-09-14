@@ -2,8 +2,8 @@ package oauth
 
 
 import (
-	"gitee.com/youbeiwuhuan/knife4go/gin-swagger-knife/constant"
-	"gitee.com/youbeiwuhuan/knife4go/gin-swagger-knife/utils"
+	"github.com/ericgaogao/knife4go/gin-swagger-knife/constant"
+	"github.com/ericgaogao/knife4go/gin-swagger-knife/utils"
 	"github.com/gin-gonic/gin"
 
 )
@@ -18,11 +18,11 @@ const (
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Knife4j-OAuth2</title>
-    <script src="jquery.min.js"></script>
+    <script src="axios.min.js"></script>
 </head>
 <body>
 <script type="text/javascript">
-$(function(){
+(function(){
     function OAuth2(url){
         this.url=url;
         this.code=null;
@@ -83,10 +83,25 @@ $(function(){
             "grant_type":"authorization_code",
             "code":this.code,
             "redirect_uri":decodeURIComponent(this.cacheValue.redirectUri),
-            "client_id":this.cacheValue.clientId,
-            "client_secret":this.cacheValue.clientSecret
         }
-        $.post(url,params,function(data){
+        let instance=axios.create();
+        // 创建一个新的 URLSearchParams 实例，并传入一个包含键值对的数组
+        const clientParams = new URLSearchParams([
+          ['client_id', this.cacheValue.clientId],
+          ['client_secret', this.cacheValue.clientSecret]
+        ]);
+        const clientParamsString = params.toString();
+        let requestConfig={
+            url: url,
+            method: 'post',
+            timeout: 0,
+            //此data必传,不然默认是data:undefined,https://github.com/axios/axios/issues/86
+            //否则axios会忽略请求头Content-Type
+            data: clientParamsString,
+            params:params
+        }
+        instance.request(requestConfig).then(res=>{
+            let data=res.data;
             if(data!=null&&data!=undefined) {
                 that.cacheValue.accessToken=data.token_type+" "+data.access_token;
                 that.cacheValue.tokenType=data.token_type;
@@ -94,12 +109,12 @@ $(function(){
                 window.localStorage.setItem(that.state,JSON.stringify(that.cacheValue))
                 window.close();
             }
-        })
-    }
+            
+        })    }
     var oauth=new OAuth2(window.location.href);
     oauth.init();
     oauth.auth();
-})
+})()
 </script>
 
 </body>

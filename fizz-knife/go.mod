@@ -1,4 +1,4 @@
-module gitee.com/youbeiwuhuan/knife4go/fizz-knife
+module github.com/ericgaogao/knife4go/fizz-knife
 
 go 1.15
 

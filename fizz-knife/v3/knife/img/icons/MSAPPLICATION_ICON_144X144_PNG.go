@@ -1,8 +1,8 @@
 package icons
 
 import (
-	"gitee.com/youbeiwuhuan/knife4go/fizz-knife/constant"
-	"gitee.com/youbeiwuhuan/knife4go/fizz-knife/utils"
+	"github.com/ericgaogao/knife4go/fizz-knife/constant"
+	"github.com/ericgaogao/knife4go/fizz-knife/utils"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,10 +17,3 @@ func AddRouterOfMsapplicationIcon144x144Png(router *gin.Engine) {
 	utils.GetOther(router, MSAPPLICATION_ICON_144X144_PNG_RELATIVE_PATH, MSAPPLICATION_ICON_144X144_PNG_HEX_CONTENT)
 
 }
-
-
-
-
-
-
-

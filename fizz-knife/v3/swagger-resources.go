@@ -1,8 +1,8 @@
 package v3
 
 import (
-	"gitee.com/youbeiwuhuan/knife4go/fizz-knife/constant"
-	"gitee.com/youbeiwuhuan/knife4go/fizz-knife/utils"
+	"github.com/ericgaogao/knife4go/fizz-knife/constant"
+	"github.com/ericgaogao/knife4go/fizz-knife/utils"
 	"github.com/gin-gonic/gin"
 )
 

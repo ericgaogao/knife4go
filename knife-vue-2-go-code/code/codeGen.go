@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/hex"
 	"fmt"
-	"gitee.com/youbeiwuhuan/knife4go/knife-vue-2-go-code/utils"
+	"github.com/ericgaogao/knife4go/knife-vue-2-go-code/utils"
 	"io/ioutil"
 	"os"
 	"strconv"
@@ -83,11 +83,11 @@ func add2KnifeArgs(args *KnifeArgs, args2 DistFileTemplArgs) {
 
 }
 
-//生成go文件
+// 生成go文件
 func makeDistGoFile(args DistFileTemplArgs, path string) {
 	//TODO 生成go文件
 	utils.CreateDirIfNotExists(path)
-
+	fmt.Println(path + "/" + args.FileName2 + ".go")
 	f, err := os.OpenFile(path+"/"+args.FileName2+".go", os.O_CREATE|os.O_RDWR|os.O_TRUNC, os.ModeAppend|os.ModePerm)
 	if nil != err {
 		fmt.Errorf(" %s create file error: %v", path+"/"+args.FileName, err)
@@ -102,8 +102,11 @@ func makeDistGoFile(args DistFileTemplArgs, path string) {
 	}
 
 	//tmpl.Execute(os.Stdout, args)
-	tmpl.Execute(f, args)
+	err1 := tmpl.Execute(f, args)
 
+	if err1 != nil {
+		panic(err1)
+	}
 }
 
 func getFileName2(fName string) string {

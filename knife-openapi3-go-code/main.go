@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gitee.com/youbeiwuhuan/knife4go/knife-openapi3-go-code/code"
-	"gitee.com/youbeiwuhuan/knife4go/knife-openapi3-go-code/utils"
+	"github.com/ericgaogao/knife4go/knife-openapi3-go-code/code"
+	"github.com/ericgaogao/knife4go/knife-openapi3-go-code/utils"
 	"os"
 	"text/template"
 )
@@ -34,7 +34,7 @@ func makeKnifeFile(args *code.KnifeArgs, path string) {
 
 	defer f.Close()
 
-	tmpl, err := template.ParseFiles("./templ/knife.go.tmpl")
+	tmpl, err := template.ParseFiles("./templ/knife.go.tmp.tmpl")
 	if err != nil {
 		panic(err)
 	}

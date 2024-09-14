@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/hex"
 	"fmt"
-	"gitee.com/youbeiwuhuan/knife4go/knife-openapi3-go-code/utils"
+	"github.com/ericgaogao/knife4go/knife-openapi3-go-code/utils"
 	"io/ioutil"
 	"os"
 	"strconv"
