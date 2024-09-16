@@ -104,9 +104,9 @@ func InitSwaggerKnife(router *gin.Engine, args *InitArgs) {
 
 	img.AddRouterOfLoading3x65eacf61Gif(router)
 
-	js.AddRouterOfAppFcabcb82Js(router)
+	js.AddRouterOfApp5b8b5fd8Js(router)
 
-	js.AddRouterOfAppFcabcb82JsGz(router)
+	js.AddRouterOfApp5b8b5fd8JsGz(router)
 
 	js.AddRouterOfChunk0d102d5a41a24621Js(router)
 
